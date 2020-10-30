@@ -5,6 +5,7 @@ public class Main {
 		// TODO Auto-generated method stub
 		//123
 		//1234
+		System.out.println("luka <3");
 	}
 
 }
