@@ -7,6 +7,7 @@
 			"mesto": "Beograd"
 		},
 		"entityProperties": {
+			
 		}
 	},
 	{
@@ -24,8 +25,19 @@
 					"prezime": "Peric"
 				},
 				"entityProperties": {
+					
 				}
 			}
+		}
+	},
+	{
+		"id": 10,
+		"naziv": "Test",
+		"simpleProperties": {
+			
+		},
+		"entityProperties": {
+			
 		}
 	}
 ]

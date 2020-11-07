@@ -11,14 +11,25 @@ public class Main {
 
 		ImportExportJSONImpl impl = new ImportExportJSONImpl();
 		List<Entitet> entiteti = impl
-				.importFileToObject("D:\\Users\\Hp\\Documents\\GitHub\\Softverske-Komponente-LKAR\\SKPJSON\\data\\data.json");
+				.importFileToObject("C:\\Users\\Name\\git\\Softverske-Komponente-LKAR\\SKPJSON\\data\\data.json");
 
 		for (Entitet e : entiteti) {
 			System.out.println(e);
 		}
 		
-		impl.exportObjectToFile(entiteti, "D:\\Users\\Hp\\Documents\\GitHub\\Softverske-Komponente-LKAR\\SKPJSON\\data\\data.json");
-
+		System.out.println("\n");
+		
+		Entitet entitet = impl.selectDataByID(10, entiteti);
+		Entitet entitet1 = impl.selectDataByID(2);
+		
+		System.out.println(entitet1.getEntityProperties());
+		
+		/*Entitet e1 = new Entitet(10, "Test");
+		
+		entiteti.add(e1);
+		
+		impl.exportObjectToFile(entiteti, "C:\\Users\\Name\\git\\Softverske-Komponente-LKAR\\SKPJSON\\data\\data.json");*/
+		
 	}
 
 }

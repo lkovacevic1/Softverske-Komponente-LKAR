@@ -8,4 +8,7 @@ public interface ImportExport {
 
 	boolean exportObjectToFile(List<Entitet> entiteti, String path) throws Exception;
 
+	Entitet selectDataByID(int id, List<Entitet> entiteti) throws Exception;
+	
+	Entitet selectDataByID(int id) throws Exception;
 }

@@ -1,7 +1,70 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>SK</groupId>
-  <artifactId>SoftverskeKomponenteProjekat</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  <name>SoftverskeKomponenteProjekat</name>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>SK</groupId>
+	<artifactId>SoftverskeKomponenteProjekat</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
+	<name>SoftverskeKomponenteProjekat</name>
+
+	<dependencies>
+		
+		<dependency>
+			<groupId>com.sample1</groupId>
+			<artifactId>sample1</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/lib/SKPJSON-0.0.1-SNAPSHOT.jar</systemPath>
+		</dependency>
+		
+	</dependencies>
+
+	<build>
+		<plugins>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>attach-javadocs</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+
+				<configuration>
+					<javadocExecutable>${java.home}/bin/javadoc</javadocExecutable>
+					<source>8</source>
+				</configuration>
+			</plugin>
+
+
+			<plugin>
+				<artifactId>maven-antrun-plugin</artifactId>
+				<executions>
+					<execution>
+						<phase>install</phase>
+						<configuration>
+							<!-- Ispisujemo sve sto bi u antu izmedju <target></target> pisali -->
+							<tasks>
+
+								<copy todir="/home/ice-frog/Desktop/test">
+									<fileset dir="./target" includes="**" />
+								</copy>
+
+							</tasks>
+						</configuration>
+						<goals>
+							<goal>run</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+		</plugins>
+	</build>
+
 </project>
