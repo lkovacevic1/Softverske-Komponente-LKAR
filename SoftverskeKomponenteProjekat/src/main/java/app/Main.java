@@ -18,7 +18,7 @@ public class Main {
 	 */
 	public static void main(String[] args) throws Exception {
 		
-		// dbexporter = ExporterManager.getExporter("studenti2.json");
+		
 		
 	}
 
