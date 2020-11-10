@@ -12,4 +12,5 @@ public interface ImportExport {
 	
 	Entitet selectDataByID(int id) throws Exception;
 
+	List<Entitet> selectByNmae(String name) throws Exception;
 }
