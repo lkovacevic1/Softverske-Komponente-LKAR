@@ -20,6 +20,7 @@ public abstract class DBExporter {
 	abstract public void save(List<List<String>> data);
 
 	abstract public void save(List<List<String>> data, List<String> header);
+<<<<<<< HEAD
 
 	public void save(ResultSet rs, boolean useColumnLabelsAsHeaders) throws SQLException {
 		List<List<String>> all = new ArrayList<List<String>>();
@@ -70,6 +71,10 @@ public abstract class DBExporter {
 		save(rs, header);
 	}
 	
+=======
+	
+	abstract public Entitet findByID(int id, List<Entitet> entiteti);
+>>>>>>> branch 'master' of https://github.com/lkovacevic1/Softverske-Komponente-LKAR.git
 
 	public void setFileName(String fileName) {
 		this.fileName = fileName;

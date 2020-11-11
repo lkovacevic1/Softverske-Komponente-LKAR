@@ -1,16 +1,19 @@
 package utils;
 
-import java.io.File;
 import java.util.List;
 
+<<<<<<< HEAD
 import javax.lang.model.UnknownEntityException;
 import javax.swing.plaf.ComponentUI;
 
 import com.fasterxml.jackson.core.type.TypeReference;
+=======
+>>>>>>> branch 'master' of https://github.com/lkovacevic1/Softverske-Komponente-LKAR.git
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ser.impl.FilteredBeanPropertyWriter;
 
 import exportdb.DBExporter;
+<<<<<<< HEAD
 import exportdb.ExporterManager;
 
 public class ImportExportJSONImpl extends DBExporter implements ImportExport{
@@ -19,8 +22,15 @@ public class ImportExportJSONImpl extends DBExporter implements ImportExport{
 		ExporterManager.registerExporter(new ImportExportJSONImpl());
 	}
 
+=======
+import exportdb.Entitet;
+
+
+public class ImportExportJSONImpl extends DBExporter{
+>>>>>>> branch 'master' of https://github.com/lkovacevic1/Softverske-Komponente-LKAR.git
 
 	@Override
+<<<<<<< HEAD
 	public List<Entitet> importFileToObject(String path) throws Exception {
 
 		ObjectMapper objectMapper = new ObjectMapper();
@@ -28,37 +38,30 @@ public class ImportExportJSONImpl extends DBExporter implements ImportExport{
 		});
 		
 		return entiteti;
+=======
+	public void save(List<List<String>> arg0) {
+		// TODO Auto-generated method stub
+		
+>>>>>>> branch 'master' of https://github.com/lkovacevic1/Softverske-Komponente-LKAR.git
 	}
 
 	@Override
-	public boolean exportObjectToFile(List<Entitet> entiteti, String path) throws Exception {
-		try {
-			ObjectMapper objectMapper = new ObjectMapper();
-			objectMapper.writeValue(new File(path), entiteti);
-		} catch (Exception e) {
-			e.printStackTrace();
-			return false;
-		}
-		return true;
+	public void save(List<List<String>> arg0, List<String> arg1) {
+		// TODO Auto-generated method stub
+		
 	}
 
-	//Selekcija entiteta za dati ID i listu entitta
 	@Override
-	public Entitet selectDataByID(int id, List<Entitet> entiteti) throws Exception {
-		Entitet et = null;
+	public Entitet findByID(int id, List<Entitet> entiteti) {
 		for(Entitet e : entiteti) {
 			if(e.getId() == id) {
-				et = e;
-				System.out.println(et);
-				return et;
+				return e;
 			}
-		}
-		if(et == null) {
-			System.out.println("Ne postoji entitet sa tim ID-on!");
 		}
 		return null;
 	}
 
+<<<<<<< HEAD
 	//Selekcija entiteta za dati ID
 	@Override
 	public Entitet selectDataByID(int id) throws Exception {
@@ -147,4 +150,6 @@ public class ImportExportJSONImpl extends DBExporter implements ImportExport{
 		
 	}
 	
+=======
+>>>>>>> branch 'master' of https://github.com/lkovacevic1/Softverske-Komponente-LKAR.git
 }

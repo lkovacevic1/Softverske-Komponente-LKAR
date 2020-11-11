@@ -2,14 +2,13 @@ package test;
 
 import java.util.List;
 
-import utils.Entitet;
 import utils.ImportExportJSONImpl;
 
 public class Main {
 
 	public static void main(String[] args) throws Exception {
 
-		ImportExportJSONImpl impl = new ImportExportJSONImpl();
+		/*ImportExportJSONImpl impl = new ImportExportJSONImpl();
 		List<Entitet> entiteti = impl
 				.importFileToObject("D:\\Users\\Hp\\Documents\\GitHub\\Softverske-Komponente-LKAR\\SoftverskeKomponenteProjekat\\data\\data.json");
 
@@ -20,7 +19,11 @@ public class Main {
 		System.out.println("\n");
 		
 		//Entitet entitet = impl.selectDataByID(10, entiteti);
+<<<<<<< HEAD
 		Entitet entitet1 = impl.selectDataByID(2);
+=======
+		Entitet entitet1 = impl.selectDataByID(3);*/
+>>>>>>> branch 'master' of https://github.com/lkovacevic1/Softverske-Komponente-LKAR.git
 		
 		//List<Entitet> entitet2 = impl.selectByNmae("profesor");
 		

@@ -16,8 +16,13 @@
 		</dependency>
 		
 		<dependency>
+<<<<<<< HEAD
 			<groupId>com.sample1</groupId>
 			<artifactId>sample1</artifactId>
+=======
+			<groupId>com.sample3</groupId>
+			<artifactId>sample3</artifactId>
+>>>>>>> branch 'master' of https://github.com/lkovacevic1/Softverske-Komponente-LKAR.git
 			<version>1.0</version>
 			<scope>system</scope>
 			<systemPath>${project.basedir}/lib/SKPSpecifikacija-0.0.1-SNAPSHOT.jar</systemPath>

@@ -13,7 +13,7 @@ import com.fasterxml.jackson.dataformat.yaml.YAMLGenerator.Feature;
 
 public class ImportExportYAMLImpl implements ImportExport{
 
-	public List<Entitet> importFileToObject(String path) throws Exception {
+	/*public List<Entitet> importFileToObject(String path) throws Exception {
 
 		ObjectMapper objectMapper = new ObjectMapper();
 		List<Entitet> entiteti = objectMapper.readValue(new File(path), new TypeReference<List<Entitet>>() {
@@ -31,6 +31,6 @@ public class ImportExportYAMLImpl implements ImportExport{
 			return false;
 		}
 		return true;
-	}
+	}*/
 	
 }
