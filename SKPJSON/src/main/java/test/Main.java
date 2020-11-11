@@ -2,14 +2,13 @@ package test;
 
 import java.util.List;
 
-import utils.Entitet;
 import utils.ImportExportJSONImpl;
 
 public class Main {
 
 	public static void main(String[] args) throws Exception {
 
-		ImportExportJSONImpl impl = new ImportExportJSONImpl();
+		/*ImportExportJSONImpl impl = new ImportExportJSONImpl();
 		List<Entitet> entiteti = impl
 				.importFileToObject("C:\\Users\\Name\\git\\Softverske-Komponente-LKAR\\SKPJSON\\data\\data.json");
 
@@ -20,7 +19,7 @@ public class Main {
 		System.out.println("\n");
 		
 		//Entitet entitet = impl.selectDataByID(10, entiteti);
-		Entitet entitet1 = impl.selectDataByID(3);
+		Entitet entitet1 = impl.selectDataByID(3);*/
 		
 		//List<Entitet> entitet2 = impl.selectByNmae("profesor");
 		

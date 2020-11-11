@@ -4,7 +4,7 @@ import java.util.List;
 
 public interface ImportExport {
 
-	List<Entitet> importFileToObject(String path) throws Exception;
+	/*List<Entitet> importFileToObject(String path) throws Exception;
 
 	boolean exportObjectToFile(List<Entitet> entiteti, String path) throws Exception;
 	
@@ -12,5 +12,5 @@ public interface ImportExport {
 	
 	Entitet selectDataByID(int id) throws Exception;
 
-	List<Entitet> selectByNmae(String name) throws Exception;
+	List<Entitet> selectByNmae(String name) throws Exception;*/
 }
