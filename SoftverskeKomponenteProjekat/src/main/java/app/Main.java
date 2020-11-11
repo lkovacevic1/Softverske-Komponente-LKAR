@@ -2,11 +2,9 @@ package app;
 
 import java.util.List;
 
-import exportdb.DBExporter;
-import exportdb.ExporterManager;
-import utils.Entitet;
+import exportdb.Entitet;
 import utils.ImportExport;
-import utils.ImportExportJSONImpl;
+import utils.ImportExportYAMLImpl;
 
 
 
@@ -19,16 +17,24 @@ public class Main {
 	 * @throws Exception opis greske
 	 */
 	public static void main(String[] args) throws Exception {
-
-		DBExporter dbexporter = ExporterManager.getExporter("data.json");
-
-		//Entitet et = dbexporter.findByID(1);
-
 		
-		ImportExportJSONImpl impl = new ImportExportJSONImpl();
-		Entitet e = (Entitet) impl.importFileToObject("C:\\Users\\Name\\git\\Softverske-Komponente-LKAR\\SoftverskeKomponenteProjekat\\data\\data.json");
-		System.out.println(e);
+		/*ImportExportJSONImpl jsonimpl = new ImportExportJSONImpl();
+		List<Entitet> entiteti = jsonimpl
+				.importFileToObject("D:\\Users\\Hp\\Documents\\GitHub\\Softverske-Komponente-LKAR\\SKPJSON\\data\\data.json");
 		
+		for (Entitet e : entiteti) {
+			System.out.println(e);
+		}
+		//impl.findByID(1, entiteti);*/
+
+		ImportExport impl = new ImportExportYAMLImpl();
+		
+		List<Entitet> entiteti = impl
+				.importFileToObject("D:\\Users\\Hp\\Documents\\GitHub\\Softverske-Komponente-LKAR\\SKPYAML\\data\\data.yml");
+
+		for (Entitet e : entiteti) {
+			System.out.println(e);
+		}
 	}
 
 }

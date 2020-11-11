@@ -4,8 +4,8 @@ import java.util.List;
 
 public interface ImportExport {
 
-	/*List<Entitet> importFileToObject(String path) throws Exception;
+	Object importFileToObject(String path, Class<?> classOf);
 
-	boolean exportObjectToFile(List<Entitet> entiteti, String path) throws Exception;*/
+	boolean exportObjectToFile(Object obj, String path);
 	
 }

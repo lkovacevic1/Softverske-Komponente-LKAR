@@ -2,6 +2,7 @@ package test;
 
 import java.util.List;
 
+import exportdb.Entitet;
 import utils.ImportExportYAMLImpl;
 
 
@@ -9,16 +10,11 @@ public class Main {
 
 	public static void main(String[] args) {
 
-		ImportExportYAMLImpl impl = new ImportExportYAMLImpl();
-		/*List<Entitet> entiteti = impl
-				.importFileToObject("/home/ice-frog/Workspaces/Java/Softverske Komponente/YAML_Handler/data/data.yml");
-		
-		for (Entitet e : entiteti) {
-			System.out.println(e);
-		}
+		//ImportExportYAMLImpl impl = new ImportExportYAMLImpl();
 
-		impl.exportObjectToFile(entiteti,
-				"/home/ice-frog/Workspaces/Java/Softverske Komponente/YAML_Handler/data/data.yml");*/
+		//Entitet p = (Entitet) impl.importFileToObject("C:\\Users\\virtual-Ice-frog\\eclipse-workspace\\YAML_Handler\\data\\data.yml", Person.class);
+		//System.out.println(p.getName());
+	
 	}
 
 }
