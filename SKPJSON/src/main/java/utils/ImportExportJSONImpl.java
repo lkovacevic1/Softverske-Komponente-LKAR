@@ -27,10 +27,8 @@ import exportdb.Entitet;
 
 
 public class ImportExportJSONImpl extends DBExporter{
->>>>>>> branch 'master' of https://github.com/lkovacevic1/Softverske-Komponente-LKAR.git
 
 	@Override
-<<<<<<< HEAD
 	public List<Entitet> importFileToObject(String path) throws Exception {
 
 		ObjectMapper objectMapper = new ObjectMapper();
@@ -38,11 +36,10 @@ public class ImportExportJSONImpl extends DBExporter{
 		});
 		
 		return entiteti;
-=======
+		
 	public void save(List<List<String>> arg0) {
 		// TODO Auto-generated method stub
 		
->>>>>>> branch 'master' of https://github.com/lkovacevic1/Softverske-Komponente-LKAR.git
 	}
 
 	@Override
