@@ -14,6 +14,8 @@ public abstract class DBExporter {
 
 	public DBExporter() {
 	}
+	
+	abstract public Entitet findByID(int id)throws Exception;
 
 	abstract public void save(List<List<String>> data);
 
@@ -67,10 +69,13 @@ public abstract class DBExporter {
 		ResultSet rs = stmt.executeQuery(query);
 		save(rs, header);
 	}
+	
 
 	public void setFileName(String fileName) {
 		this.fileName = fileName;
 
 	}
+	
+	
 
 }

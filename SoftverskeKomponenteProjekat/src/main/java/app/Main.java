@@ -2,6 +2,8 @@ package app;
 
 import java.util.List;
 
+import exportdb.DBExporter;
+import exportdb.ExporterManager;
 import utils.Entitet;
 import utils.ImportExport;
 
@@ -16,9 +18,9 @@ public class Main {
 	 * @throws Exception opis greske
 	 */
 	public static void main(String[] args) throws Exception {
-		
-		// dbexporter = ExporterManager.getExporter("studenti2.json");
-		
+		DBExporter dbexporter = ExporterManager.getExporter("data.json");
+
+		//Entitet et = dbexporter.findByID(1);
 	}
 
 }

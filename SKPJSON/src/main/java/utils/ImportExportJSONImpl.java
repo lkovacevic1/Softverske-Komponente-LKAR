@@ -4,11 +4,21 @@ import java.io.File;
 import java.util.List;
 
 import javax.lang.model.UnknownEntityException;
+import javax.swing.plaf.ComponentUI;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.ser.impl.FilteredBeanPropertyWriter;
 
-public class ImportExportJSONImpl implements ImportExport{
+import exportdb.DBExporter;
+import exportdb.ExporterManager;
+
+public class ImportExportJSONImpl extends DBExporter implements ImportExport{
+	
+	static {
+		ExporterManager.registerExporter(new ImportExportJSONImpl());
+	}
+
 
 	@Override
 	public List<Entitet> importFileToObject(String path) throws Exception {
@@ -16,7 +26,7 @@ public class ImportExportJSONImpl implements ImportExport{
 		ObjectMapper objectMapper = new ObjectMapper();
 		List<Entitet> entiteti = objectMapper.readValue(new File(path), new TypeReference<List<Entitet>>() {
 		});
-
+		
 		return entiteti;
 	}
 
@@ -53,7 +63,7 @@ public class ImportExportJSONImpl implements ImportExport{
 	@Override
 	public Entitet selectDataByID(int id) throws Exception {
 		ObjectMapper objectMapper = new ObjectMapper();
-		List<Entitet> entiteti = objectMapper.readValue(new File("C:\\Users\\Name\\git\\Softverske-Komponente-LKAR\\SKPJSON\\data\\data.json"), new TypeReference<List<Entitet>>() {
+		List<Entitet> entiteti = objectMapper.readValue(new File("D:\\Users\\Hp\\Documents\\GitHub\\Softverske-Komponente-LKAR\\SoftverskeKomponenteProjekat\\data\\data.json"), new TypeReference<List<Entitet>>() {
 		});
 		
 		Entitet et = null;
@@ -98,4 +108,43 @@ public class ImportExportJSONImpl implements ImportExport{
 		
 		return null;
 	}
+
+	@Override
+	public void save(List<List<String>> arg0) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void save(List<List<String>> arg0, List<String> arg1) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public exportdb.Entitet findByID(int id) throws Exception {
+		ObjectMapper objectMapper = new ObjectMapper();
+		List<Entitet> entiteti = objectMapper.readValue(new File("D:\\Users\\Hp\\Documents\\GitHub\\Softverske-Komponente-LKAR\\SoftverskeKomponenteProjekat\\data\\data.json"), new TypeReference<List<Entitet>>() {
+		});
+		
+		Entitet et = null;
+		
+		for(Entitet e : entiteti) {
+			if(e.getId() == id) {
+				et = e;
+				System.out.println(et);
+				break;
+			}else if(e.getEntityProperties().get(id) != null) {
+				et = e;
+				System.out.println(et);
+				break;
+			}
+		}
+		if(et == null) {
+			System.out.println("Ne postoji entitet sa tim ID-on!");
+		}
+		return null;
+		
+	}
+	
 }
