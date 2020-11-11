@@ -16,8 +16,8 @@
 		</dependency>
 		
 		<dependency>
-			<groupId>com.sample1</groupId>
-			<artifactId>sample1</artifactId>
+			<groupId>com.sample3</groupId>
+			<artifactId>sample3</artifactId>
 			<version>1.0</version>
 			<scope>system</scope>
 			<systemPath>${project.basedir}/lib/SKPSpecifikacija-0.0.1-SNAPSHOT.jar</systemPath>
